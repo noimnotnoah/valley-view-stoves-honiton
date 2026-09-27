@@ -3,188 +3,1051 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Valley View Stoves — Hetas registered. Honiton.</title>
+<title>Valley View Stoves — Steve Turner | Hetas Registered Installer, Honiton</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.125rem;
-    line-height: 1.7;
-    color: #374151;
-    background: #f3f4f6;
-  }
-  .container {
-    max-width: 72rem;
-    margin: 0 auto;
-    padding: 2rem 1.5rem 3rem;
-  }
-  header {
-    border-bottom: 3px solid #d97706;
-    padding-bottom: 1.5rem;
-    margin-bottom: 2rem;
-  }
-  h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #374151;
-    letter-spacing: -0.02em;
-  }
-  h1 span { color: #d97706; }
-  .subhead {
-    font-size: 1.125rem;
-    color: #6b7280;
-    margin-top: 0.25rem;
-  }
-  h2 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #374151;
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
-    border-left: 4px solid #d97706;
-    padding-left: 0.75rem;
-  }
-  .layout {
-    display: grid;
-    grid-template-columns: 1fr 18rem;
-    gap: 2.5rem;
-    align-items: start;
-  }
-  .main-col p { margin-bottom: 1rem; }
-  .main-col ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 1.5rem;
-  }
-  .main-col ul li {
-    padding: 0.35rem 0 0.35rem 1.5rem;
-    position: relative;
-  }
-  .main-col ul li::before {
-    content: "›";
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: #374151;
+  background: #f3f4f6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== UTILITIES ===== */
+.container { max-width: 76rem; margin: 0 auto; padding: 0 1.5rem; }
+.section { padding: 4.5rem 0; }
+.section-label {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #d97706;
+  margin-bottom: 0.75rem;
+}
+.section-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.section-subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 36rem;
+}
+@media (max-width: 48rem) {
+  .section { padding: 3rem 0; }
+  .section-title { font-size: 1.75rem; }
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #1f2937;
+  padding: 0 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.navbar-inner {
+  max-width: 76rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+.navbar-brand-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: linear-gradient(135deg, #d97706, #f59e0b);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+.navbar-brand-text {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+.navbar-brand-text small {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: #d97706;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+.navbar-links a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.navbar-links a:hover,
+.navbar-links a:focus-visible { color: #fbbf24; }
+.navbar-cta {
+  background: #d97706 !important;
+  color: #fff !important;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 600 !important;
+  font-size: 0.8125rem !important;
+  transition: background 0.2s !important;
+}
+.navbar-cta:hover,
+.navbar-cta:focus-visible { background: #b45309 !important; }
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #d1d5db;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+@media (max-width: 48rem) {
+  .navbar-links {
+    display: none;
     position: absolute;
+    top: 4rem;
     left: 0;
-    color: #d97706;
-    font-weight: 700;
-    font-size: 1.3rem;
+    right: 0;
+    background: #1f2937;
+    flex-direction: column;
+    padding: 1rem 1.5rem 1.5rem;
+    gap: 1rem;
+    border-top: 1px solid #374151;
   }
-  .sidebar {
-    background: #fff;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  .sidebar h3 {
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #d97706;
-    margin-bottom: 0.75rem;
-    border-bottom: 1px solid #e5e7eb;
-    padding-bottom: 0.5rem;
-  }
-  .sidebar p { margin-bottom: 0.75rem; }
-  .sidebar p:last-child { margin-bottom: 0; }
-  .sidebar strong { color: #374151; }
-  .contact-box {
-    background: #374151;
-    color: #f3f4f6;
-    border-radius: 0.5rem;
-    padding: 1.25rem 1.5rem;
-    margin-top: 1.5rem;
-  }
-  .contact-box h3 {
-    color: #d97706;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.5rem;
-    border: none;
-    padding: 0;
-  }
-  .contact-box a {
-    color: #fbbf24;
-    text-decoration: none;
-  }
-  .contact-box a:hover { text-decoration: underline; }
-  .contact-box p { margin-bottom: 0.25rem; }
-  footer {
-    margin-top: 3rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid #d1d5db;
-    font-size: 0.875rem;
-    color: #6b7280;
-  }
-  @media (max-width: 48rem) {
-    .layout { grid-template-columns: 1fr; }
-    h1 { font-size: 2rem; }
-    .container { padding: 1.5rem 1.25rem 2rem; }
-  }
+  .navbar-links.open { display: flex; }
+  .navbar-toggle { display: block; }
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(165deg, #1f2937 0%, #111827 100%);
+  padding: 6rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 50rem 30rem at 100% 100%, rgba(217,119,6,0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 30rem 20rem at 0% 0%, rgba(217,119,6,0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(217,119,6,0.15);
+  border: 1px solid rgba(217,119,6,0.3);
+  color: #f59e0b;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+.hero-badge span {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #f59e0b;
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.hero h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.75rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  max-width: 46rem;
+  margin-bottom: 1.25rem;
+}
+.hero h1 span { color: #f59e0b; }
+.hero-lead {
+  font-size: 1.25rem;
+  color: #9ca3af;
+  max-width: 36rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+.hero-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 2.5rem;
+  margin-top: 0.5rem;
+}
+.hero-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #d1d5db;
+  font-size: 0.9375rem;
+}
+.hero-stat-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(217,119,6,0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
+.hero-stat strong {
+  display: block;
+  color: #fff;
+  font-size: 1rem;
+}
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #d97706;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary:hover { background: #b45309; transform: translateY(-1px); }
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1.5px solid #4b5563;
+  color: #d1d5db;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-outline:hover { border-color: #d97706; color: #f59e0b; }
+@media (max-width: 48rem) {
+  .hero { padding: 4rem 0 3.5rem; }
+  .hero h1 { font-size: 2.5rem; }
+  .hero-lead { font-size: 1.0625rem; }
+}
+
+/* ===== HETAS STRIP ===== */
+.hetas-strip {
+  background: #e5e7eb;
+  padding: 1.25rem 0;
+  text-align: center;
+}
+.hetas-strip p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.hetas-strip strong {
+  color: #374151;
+  font-weight: 600;
+}
+.hetas-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #374151;
+  color: #f59e0b;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.9rem;
+  border-radius: 9999px;
+}
+
+/* ===== SERVICES ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.service-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
+  transition: box-shadow 0.25s, transform 0.2s;
+}
+.service-card:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.07);
+  transform: translateY(-2px);
+}
+.service-card-icon {
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.375rem;
+  margin-bottom: 1.125rem;
+}
+.service-card h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.45rem;
+}
+.service-card p {
+  font-size: 0.9375rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+@media (max-width: 48rem) {
+  .services-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== BRANDS ===== */
+.brands-showcase {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  margin-top: 2.5rem;
+}
+.brands-showcase p {
+  color: #6b7280;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+.brands-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.brand-card {
+  background: #f9fafb;
+  border-radius: 0.875rem;
+  padding: 1.75rem;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  transition: box-shadow 0.2s;
+}
+.brand-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+.brand-card-logo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+.brand-card-logo span {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 0.25rem;
+}
+.brand-card-desc {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.5;
+  margin-top: 0.75rem;
+}
+@media (max-width: 48rem) {
+  .brands-list { grid-template-columns: 1fr; }
+  .brands-showcase { padding: 1.5rem; }
+}
+
+/* ===== SHOWROOM ===== */
+.showroom-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+.showroom-visual {
+  background: linear-gradient(135deg, #374151, #1f2937);
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  text-align: center;
+  min-height: 18rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.showroom-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 40%, rgba(217,119,6,0.07) 0%, transparent 60%),
+    radial-gradient(circle at 70% 60%, rgba(217,119,6,0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+.showroom-stove-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.showroom-visual h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.showroom-visual p {
+  color: #9ca3af;
+  font-size: 0.9375rem;
+  margin-top: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+.showroom-visual .count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: #d97706;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.showroom-info h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+.showroom-info p {
+  color: #6b7280;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.showroom-features {
+  list-style: none;
+  margin-top: 1rem;
+}
+.showroom-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  padding: 0.4rem 0;
+  font-size: 0.9375rem;
+  color: #374151;
+}
+.showroom-features li::before {
+  content: '✓';
+  color: #d97706;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+@media (max-width: 48rem) {
+  .showroom-wrap { grid-template-columns: 1fr; gap: 2rem; }
+  .showroom-visual { min-height: 14rem; padding: 2rem 1.5rem; }
+}
+
+/* ===== ABOUT ===== */
+.about-content {
+  max-width: 48rem;
+  margin-top: 1.5rem;
+}
+.about-content p {
+  color: #6b7280;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+.about-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+}
+.about-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
+  color: #374151;
+}
+.about-highlight-item .num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #d97706;
+  line-height: 1;
+}
+
+/* ===== CONTACT ===== */
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2.5rem;
+}
+.contact-info-card {
+  background: #1f2937;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  color: #d1d5db;
+}
+.contact-info-card h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+.contact-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.contact-detail-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  background: rgba(217,119,6,0.12);
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
+.contact-detail-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+  margin-bottom: 0.125rem;
+}
+.contact-detail-value {
+  font-size: 1.0625rem;
+  color: #fff;
+  font-weight: 500;
+}
+.contact-detail-value a {
+  color: #f59e0b;
+  text-decoration: none;
+}
+.contact-detail-value a:hover { text-decoration: underline; }
+.contact-visual {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.contact-visual-box {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.875rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+.contact-visual-box h4 {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #d97706;
+  margin-bottom: 0.25rem;
+}
+.contact-visual-box p {
+  font-size: 0.9375rem;
+  color: #6b7280;
+}
+@media (max-width: 48rem) {
+  .contact-wrap { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #111827;
+  padding: 2.5rem 0 2rem;
+  margin-top: 1rem;
+}
+.footer-inner {
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.footer-brand {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1rem;
+  color: #d1d5db;
+}
+.footer-brand span { color: #f59e0b; }
+.footer-text {
+  font-size: 0.8125rem;
+  color: #6b7280;
+}
+.footer-text a {
+  color: #9ca3af;
+  text-decoration: none;
+}
+.footer-text a:hover { color: #f59e0b; }
+
+/* ===== BACK TO TOP ===== */
+.back-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: #374151;
+  color: #d1d5db;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, opacity 0.3s;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 50;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.back-top.visible { opacity: 1; pointer-events: auto; }
+.back-top:hover { background: #d97706; color: #fff; }
+
+/* ===== MOBILE NAV TOGGLE ===== */
+@media (max-width: 48rem) {
+  .navbar-links.open { display: flex; }
+}
 </style>
 </head>
 <body>
-<div class="container">
 
-<header>
-  <h1>Valley View <span>Stoves.</span></h1>
-  <div class="subhead">Hetas registered. Honiton.</div>
-</header>
-
-<div class="layout">
-
-<div class="main-col">
-
-  <h2>Who</h2>
-  <p>Steve Turner is a qualified Hetas registered installer with 18 years&rsquo; experience in the stove and fireplace industry. Based in Honiton, he covers Devon and the surrounding area.</p>
-
-  <h2>What</h2>
-  <ul>
-    <li>Wood-burning and multifuel stove installation</li>
-    <li>Fireplace renovations and surrounds</li>
-    <li>Stove servicing and maintenance</li>
-    <li>Chimney lining and flue work</li>
-  </ul>
-
-  <h2>Brands</h2>
-  <p>Steve supplies and installs three of the best British stove manufacturers:</p>
-  <ul>
-    <li><strong>Charnwood</strong> &mdash; Island-honed cast-iron stoves, made on the Isle of Wight.</li>
-    <li><strong>Clearview</strong> &mdash; High-efficiency, clean-burn stoves from Shropshire.</li>
-    <li><strong>Morso</strong> &mdash; Danish-designed stoves with a long heritage of quality.</li>
-  </ul>
-
-  <h2>Showroom</h2>
-  <p>Viewing is strictly by appointment. Steve has converted his outhouse into a dedicated showroom with <strong>six stoves on display</strong>, giving you the chance to see the stoves in a realistic setting and discuss your requirements without the pressure of a high-street sales environment. Call to arrange a time.</p>
-
-</div>
-
-<aside class="sidebar">
-
-  <h3>At a glance</h3>
-  <p><strong>Location</strong><br>Honiton, Devon EX14</p>
-  <p><strong>Area covered</strong><br>Devon and surrounding counties</p>
-  <p><strong>Experience</strong><br>18 years</p>
-  <p><strong>Registration</strong><br>Hetas registered installer</p>
-  <p><strong>Showroom</strong><br>6 stoves on display<br>By appointment only</p>
-  <p><strong>Brands carried</strong><br>Charnwood, Clearview, Morso</p>
-
-  <div class="contact-box">
-    <h3>Contact</h3>
-    <p>Steve Turner</p>
-    <p>01404 850XXX</p>
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar-inner">
+    <a href="#" class="navbar-brand">
+      <div class="navbar-brand-icon">🔥</div>
+      <div class="navbar-brand-text">
+        Valley View Stoves
+        <small>Steve Turner &middot; Honiton, Devon</small>
+      </div>
+    </a>
+    <button class="navbar-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <ul class="navbar-links" id="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#brands">Brands</a></li>
+      <li><a href="#showroom">Showroom</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact" class="navbar-cta">Get in touch</a></li>
+    </ul>
   </div>
+</nav>
 
-</aside>
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span></span> Hetas Registered Installer
+    </div>
+    <h1>Real fires,<br>expertly <span>installed.</span></h1>
+    <p class="hero-lead">
+      Steve Turner brings 18 years of experience to every wood-burning and
+      multifuel stove installation across Devon. Based in Honiton.
+    </p>
+    <div class="hero-strip">
+      <div class="hero-stat">
+        <div class="hero-stat-icon">📅</div>
+        <div>
+          <strong>18 Years</strong>
+          Experience
+        </div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-icon">🔥</div>
+        <div>
+          <strong>6 Stoves</strong>
+          In-showroom display
+        </div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-icon">🏠</div>
+        <div>
+          <strong>Honiton, Devon</strong>
+          Covering the South West
+        </div>
+      </div>
+    </div>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">Get a quote &rarr;</a>
+      <a href="#services" class="btn-outline">Our services</a>
+    </div>
+  </div>
+</section>
 
+<!-- ===== HETAS STRIP ===== -->
+<div class="hetas-strip">
+  <div class="container">
+    <p>
+      <span class="hetas-badge">✓ Hetas Registered</span>
+      Fully insured &middot; 18 years&rsquo; hands-on experience &middot;
+      Covering Honiton, Exeter, Taunton, and the wider South West
+      <strong>&mdash; Call 01404 850XXX</strong>
+    </p>
+  </div>
 </div>
 
-<footer>
-  <p>Valley View Stoves &mdash; Honiton, Devon EX14. Hetas registration number: <strong>XXXXX</strong>.</p>
+<!-- ===== SERVICES ===== -->
+<section class="section" id="services">
+  <div class="container">
+    <span class="section-label">What we do</span>
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:1rem;">
+      <div>
+        <h2 class="section-title" style="margin-bottom:0.25rem;">Complete stove services</h2>
+        <p class="section-subtitle">From installation through to servicing, everything under one roof.</p>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-card-icon">🪵</div>
+        <h3>Wood &amp; Multifuel Installation</h3>
+        <p>Full supply and fitting of wood-burning and multifuel stoves, including hearths, flues, and building regulation compliance. Every installation signed off to Hetas standards.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">🏛️</div>
+        <h3>Fireplace Renovations</h3>
+        <p>Transform an old hearth or open fire into a modern centrepiece. Surrounds, inset stoves, rebated fireplaces&thinsp;&mdash;&thinsp;we design it to suit your home.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">🔧</div>
+        <h3>Servicing &amp; Maintenance</h3>
+        <p>Annual servicing, flue sweeping, and safety checks to keep your stove running efficiently and cleanly. Recommended every 12 months for peace of mind.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">🌀</div>
+        <h3>Chimney Lining &amp; Flue Work</h3>
+        <p>Flexible or rigid flue lining solutions for new installations and existing chimney upgrades. Properly sized and insulated for optimum draw and safety.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BRANDS ===== -->
+<section class="section" id="brands" style="padding-top:0;">
+  <div class="container">
+    <span class="section-label">Brands we carry</span>
+    <h2 class="section-title">British &amp; European craftsmanship</h2>
+    <p class="section-subtitle" style="margin-bottom:0;">Steve supplies and installs three of the most respected stove manufacturers in the business.</p>
+    <div class="brands-showcase">
+      <p>Each brand is chosen for its build quality, heat output, and distinctive character. We&rsquo;ll help you pick the right model for your room and budget.</p>
+      <div class="brands-list">
+        <div class="brand-card">
+          <div class="brand-card-logo">
+            Charnwood
+            <span>Isle of Wight, England</span>
+          </div>
+          <p class="brand-card-desc">Cast-iron stoves hand-built on the Isle of Wight since 1972. Known for timeless design, clean burn technology, and exceptional build quality.</p>
+        </div>
+        <div class="brand-card">
+          <div class="brand-card-logo">
+            Clearview
+            <span>Shropshire, England</span>
+          </div>
+          <p class="brand-card-desc">High-efficiency, clean-burn stoves from the Shropshire hills. Unrivalled burn times and a cult following among off-grid and efficiency-minded owners.</p>
+        </div>
+        <div class="brand-card">
+          <div class="brand-card-logo">
+            Morso
+            <span>Nibe, Denmark</span>
+          </div>
+          <p class="brand-card-desc">Danish-designed stoves with a heritage dating to 1853. Morso combines Scandinavian minimalism with serious heat output and enviable efficiency.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SHOWROOM ===== -->
+<section class="section" id="showroom" style="padding-top:0;">
+  <div class="container">
+    <span class="section-label">Visit us</span>
+    <h2 class="section-title">The showroom</h2>
+    <p class="section-subtitle">View stoves in a realistic setting, without the high-street pressure.</p>
+    <div class="showroom-wrap">
+      <div class="showroom-visual">
+        <div class="showroom-stove-icon">🔥</div>
+        <h3>Six stoves on display</h3>
+        <p>Charnwood &bull; Clearview &bull; Morso</p>
+        <div class="count-badge">
+          <span>6</span> stoves to view
+        </div>
+      </div>
+      <div class="showroom-info">
+        <h3>By appointment only</h3>
+        <p>
+          Steve has converted his outhouse into a dedicated stove showroom where
+          you can see six stoves lit and running in a realistic home setting.
+          No pushy salespeople&thinsp;&mdash;&thinsp;just honest, expert advice
+          over a cup of tea.
+        </p>
+        <p>
+          Call or email to arrange a time that suits you. Evenings and weekends
+          are usually available.
+        </p>
+        <ul class="showroom-features">
+          <li>Six working stoves on display</li>
+          <li>See the heat output and flame pattern in person</li>
+          <li>Compare brands side by side</li>
+          <li>No-obligation quotes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section" id="about" style="padding-top:0;">
+  <div class="container">
+    <span class="section-label">About</span>
+    <h2 class="section-title">Steve Turner &mdash; Hetas registered since 2007</h2>
+    <div class="about-content">
+      <p>
+        Steve has been fitting stoves and fireplaces across Devon for 18 years.
+        What started as a passion for real flame and honest craftsmanship grew
+        into a business built on word-of-mouth reputation. Every job&thinsp;&mdash;&thinsp;
+        from a straight swap to a full chimney reline and fireplace renovation&thinsp;&mdash;&thinsp;
+        is done to Hetas standards, with meticulous attention to detail.
+      </p>
+      <p>
+        Based in Honiton, Steve covers Exeter, Taunton, Sidmouth,
+        and the wider South West. He works with three carefully chosen
+        brands&thinsp;&mdash;&thinsp;Charnwood, Clearview, and Morso&thinsp;&mdash;&thinsp;
+        and only recommends a stove he would put in his own home.
+      </p>
+      <div class="about-highlights">
+        <div class="about-highlight-item">
+          <span class="num">18</span>
+          Years of experience
+        </div>
+        <div class="about-highlight-item">
+          <span class="num">Hetas</span>
+          Registered installer
+        </div>
+        <div class="about-highlight-item">
+          <span class="num">3</span>
+          Premium brands
+        </div>
+        <div class="about-highlight-item">
+          <span class="num">6</span>
+          Stoves on show
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section" id="contact" style="padding-top:0;">
+  <div class="container">
+    <span class="section-label">Contact</span>
+    <h2 class="section-title">Get in touch</h2>
+    <p class="section-subtitle">Call, email, or book a showroom visit. No obligation.</p>
+    <div class="contact-wrap">
+      <div class="contact-info-card">
+        <h3>Valley View Stoves</h3>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📞</div>
+          <div>
+            <div class="contact-detail-label">Phone</div>
+            <div class="contact-detail-value">
+              <a href="tel:01404850XXX">01404 850XXX</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✉️</div>
+          <div>
+            <div class="contact-detail-label">Email</div>
+            <div class="contact-detail-value">
+              <a href="mailto:steve@valleyviewstoves.co.uk">steve@valleyviewstoves.co.uk</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📍</div>
+          <div>
+            <div class="contact-detail-label">Location</div>
+            <div class="contact-detail-value">
+              Honiton, Devon &mdash; EX14
+            </div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🕐</div>
+          <div>
+            <div class="contact-detail-label">Showroom</div>
+            <div class="contact-detail-value">
+              By appointment only
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-visual">
+        <div class="contact-visual-box">
+          <h4>Call to arrange a viewing</h4>
+          <p>Evenings and weekends available &bull; 6 stoves on display</p>
+        </div>
+        <div class="contact-visual-box">
+          <h4>Fully insured &amp; Hetas registered</h4>
+          <p>All installations comply with building regulations and Hetas standards</p>
+        </div>
+        <div class="contact-visual-box">
+          <h4>Covering the South West</h4>
+          <p>Honiton, Exeter, Taunton, Sidmouth, and surrounding areas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      Valley View <span>Stoves</span> &mdash; Honiton, Devon
+    </div>
+    <div class="footer-text">
+      Steve Turner &middot; Hetas Registered Installer &middot;
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
 </footer>
 
-</div>
+<!-- ===== BACK TO TOP ===== -->
+<button class="back-top" id="back-top" aria-label="Back to top">&uarr;</button>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+// Mobile nav toggle
+(function() {
+  var toggle = document.getElementById('nav-toggle');
+  var links = document.getElementById('nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', function() {
+      var expanded = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', expanded);
+    });
+    // Close on link click (mobile)
+    links.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+})();
+
+// Back to top button
+(function() {
+  var btn = document.getElementById('back-top');
+  if (btn) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 400) {
+        btn.classList.add('visible');
+      } else {
+        btn.classList.remove('visible');
+      }
+    });
+    btn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+})();
+</script>
+
 </body>
 </html>
